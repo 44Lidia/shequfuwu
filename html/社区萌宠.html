@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>社区萌宠</title>
+</head>
+<style>
+    *{
+        margin: 0 auto;
+        padding:0;
+    }
+    body{
+        height:100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:#222;
+    }
+    .card{
+        position:relative;
+        width: 300px;
+        height: 450px;
+        margin: 20px;
+        background-color:rgba(0, 0, 0, 0.2);
+        flex-shrink: 0;
+        border-radius: 20px;
+    }
+    .card .photo img{
+        width: 100%;
+        height: 100%;
+        /* 保持原有尺寸，裁切长边 */
+        object-fit: cover;
+        display: flex;
+        overflow: hidden;
+        border-radius: 20px;
+        flex-direction: column;
+        align-items: center;
+        color: #fff;
+       box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    }
+    .card .photo{
+        position:absolute;
+        top:0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0%;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+    .card:hover .photo{
+        top:30px;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .card h1{
+        position:absolute;
+        top:170px;
+        transition: 0.5s;
+        color:#222;
+        left:20px;
+    }
+    .card h2{
+       margin-top: 220px;
+       width: 80%;
+       border-bottom: 1px solid rgba(0,0,0,0.5);
+       font-size:20px;
+       text-align: center;
+       margin-bottom: 20px;
+       padding-bottom: 20px;
+       color:azure;
+    }
+    .card p{
+     width: 90%;
+      text-indent: 32px;
+      font-size:16px;
+      margin-bottom: 15px;
+      line-height: 30px;
+      color:azure;
+    }
+    .card a{
+      font-size:14px;
+      color:rgba(255,255,255,0.8);
+      text-decoration: none;
+      border:1px solid rgba(255,255,255,0.5);
+      padding:8px 32px;
+      border-radius: 8px;
+      margin-left:50px;
+    }
+    .card a:hover{
+        color:#222;
+        background-color: rgba(255,255,255,0.2);;
+    }
+    .card:hover h1{
+        top:10px;
+        color:azure;
+    }
+    .card .photo:before{
+        content: "";
+        position: absolute;
+        width: 100%;height: 100%;
+        background-color:linear-gradient(to bottom,transparent 50%,#222);
+
+    }
+   
+</style>
+<body>
+    <div class="card">
+        <div class="photo">
+            <img src="../images/阿花.jpg" alt="">
+        </div>
+            <h1>阿花</h1>
+            <h2>"公主"阿花</h2>
+            <P>毛茸茸的脑袋，圆滚滚的身躯，阿花喜欢在樱花树下散步。</P>
+             <a href="#">了解更多</a>
+        
+    </div>
+
+    <div class="card">
+        <div class="photo">
+            <img src="../images/柯基.jpg" alt="">
+        </div>
+            <h1>柯基</h1>
+            <h2>短腿帅哥</h2>
+            <P>他最喜欢把他的狐狸球拱来拱去，开心的时候会吐着舌头跑跑跳跳。</P>
+            <a href="#">了解更多</a>
+    </div>
+
+    <div class="card">
+        <div class="photo">
+            <img src="../images/纸狗.jpg" alt="">
+        </div>
+            <h1>礼物</h1>
+            <h2>社区新宠</h2>
+            <P>心灵手巧同学们把闲置的纸箱做成“宠物”，掀起新一股社区风潮</P>
+             <a href="#">了解更多</a>
+        
+    </div>
+</body>
+</html>

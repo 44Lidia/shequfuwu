@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 欢迎登录</title>
+    <link rel="stylesheet" href="../css/mvp.css">
+     <link rel="stylesheet" href="../css/sign.css">
+</head>
+<body>
+    <form action="" class="login">
+        <h1>Login</h1>
+        <input type="text" placeholder="账户名">
+        <input type="password" placeholder="密码">
+        <div class="vershow" id="vershow">
+            <input type="text" class="yan" id="yan" value="验证码">
+            <div class="change">换一个</div>
+        </div>
+        <input type="text" placeholder="输入验证码">
+        <input type="submit" class="btn" value="登录">
+    </form>
+    <!-- 小火箭 -->
+<div class="up">
+    <a href="index.html"> <i class="iconfont icon-xiaohuojian">home</i></a>
+</div>
+<!-- 小火箭 -->
+</body>
+<script>
+    vershow.onclick=function(){
+     let yan = document.getElementById("yan");
+    var arr="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+    var result="";
+    for(let i=0;i<4;i++)
+    {
+        var n=Math.floor(Math.random()*arr.length);
+        result+=arr[n];
+    }
+    yan.setAttribute("value",result);
+   
+    }
+    
+</script>
+</html>
