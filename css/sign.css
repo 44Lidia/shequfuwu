@@ -1,0 +1,78 @@
+*{
+    user-select: none;
+ }
+ body{
+     background-image:url("../images/注册背景.jpg") ;
+     background-size: cover;
+     background-attachment: fixed;
+     z-index:-1;  
+     width: 100%;
+ }
+ .login{
+     position:absolute;
+     top:50%;
+     margin-top: -200px;
+     left:50%;
+     margin-left: -200px;
+     background-color: rgba(0,0,0,0.4);
+     width:500px;
+     height:500px;
+     border-radius: 25px;
+     text-align: center;
+     padding: 5px 40px;
+     box-sizing: border-box;
+ }
+ h1{
+     font-family:"仓耳渔阳体 W02";
+     font-size: 42px;
+     font-weight: 600;
+     color:rgb(130, 17, 17) ;
+ }
+ input{
+     background-color:rgba(0,0,0,0.3);
+     width:80%;
+     height:20px;
+     border:none;
+     border-bottom: 2px solid rgb(130, 17, 17) ;
+     outline:none;
+     font-size:20px;
+     position:relative;
+     font-family: "仓耳渔阳体 W02";
+     color:#fff;
+ }
+ .btn{
+    background-color:rgba(0,0,0,0.3);
+     width:30%;
+     height:30px;
+     border-radius: 8px;
+     margin-top: 20px;
+     font-size:15px;
+     font-weight:200;
+     
+ }
+ .btn:hover{
+    background-color:rgb(130, 17, 17) ;
+    color:#e8e4be;
+ }
+ /* 小火箭 */
+.up{
+    height: 30px;
+    width: 30px;
+    position:relative;
+    top:50%;
+    font-size: 50px;
+    position: fixed;
+    right:200px;
+}
+.up i{
+    font-size: 30px;
+    color:aliceblue;
+    z-index: 1;
+}
+/* 小火箭 */
+
+@font-face {
+    font-family: "仓耳渔阳体 W02";font-weight: 400;src: url("//at.alicdn.com/wf/webfont/ARkYpaNyZT1X/DvbZjSYIwK7gOJg1ZYMd-.woff2") format("woff2"),
+    url("//at.alicdn.com/wf/webfont/ARkYpaNyZT1X/VlPtfAJ_j5WVOUQPbXKzG.woff") format("woff");
+    font-display: swap;
+  }
