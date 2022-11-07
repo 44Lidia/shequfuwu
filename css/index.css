@@ -17,6 +17,10 @@ li {
     /* 去除页内距 */
     padding:0;
     margin:0;
+    width: 100%;
+ }
+ body{
+    width: 100%;
  }
 /* body */
 
@@ -31,29 +35,28 @@ li {
 }
 .left{
     float:left;
-    width:15%;
+    width:20%;
     height: 150px;
 }
 .left p{
-   margin-left:40px;
-   margin-top: 40px;
    font-size:50px;
    color:#fff;
+   text-align: center;
+   margin-top: 10%;
 }
-
 .right{
-    margin-top: 20px;
     float:right;
-    height:55px;
-    /* background-color: chocolate; */
+    height:100%;
+    width: 50%;
     display: flex;
 }
 .right li{
     list-style-type: none;
-    width:80px;
-    height:55px;
-    margin-right: 20px;
-    /* background-color: azure; */
+    width:20%;
+    height:80%;
+    margin-left: 5%;
+    margin-top: 5%;
+    text-align: center;
 }
 .right a{
     text-decoration: none;
@@ -66,10 +69,11 @@ li {
     margin: 5px 5px 0px 25px;
 }
 .right li p{
-  color:#fff;
+    color:#fff;
     font-size:16px;
-    margin: 5px 5px 0px 30px;
+    margin-left: 5px;
     font-weight: 300;
+    
 }
 .right li .covid{
     margin-left: 0px;
@@ -79,6 +83,46 @@ li {
     font-size: 32px;
 }
 /* 头部样式 */
+
+/* 门面 */
+.door{
+  width: 80%;
+  margin: auto;
+}
+.door .label{
+  width: 40%;
+  height: 100px;
+  position: absolute;
+  top:50%;
+  left:10%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+}
+.door .label .left{
+  width: 15%;
+  height: 100px;
+  background-color: #07406c;
+  font-size: 40px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+.door .label .right{
+  width: 55%;
+  height: 100px;
+  font-size: 20px;
+  color: #fff;
+  /* background-color: aqua; */
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+.label .right:hover{
+  color:#07406c;
+  font-size:25px ;
+}
+/* 门面 */
 
 /* 社区动态 */
   /* 标题 */
@@ -139,19 +183,19 @@ li {
   }
   
   .xtx_category_super li {
+    text-decoration: none;
     height: 100px;
     padding: 0 20px 0 40px;
-    transition: background-color .25s;
+    transition: .25s;
     cursor: pointer;
   }
   
-  .xtx_category_super li:hover,
-  .xtx_category_super li.active {
+  .xtx_category_super li:hover{
     background-color: #07406c;
+    color: #fff;
   }
   
   .xtx_category_super a {
-    color: #fff;
     font-size: 24px;
     line-height: 50px;
   }
@@ -258,23 +302,32 @@ li {
 /** 公共底部 **/
 .xtx_footer {
     border-top: 1px solid #e4e4e4;
+    display: flex;
+    flex-direction: column;
   }
   
   .xtx_footer .contact {
-    padding: 60px 0 40px 25px;
+    width: 100%;
+    background-color:#fff;
+    display: flex;
+    flex-direction: row;
   }
   
   .xtx_footer .contact dl {
+    width: 30%;
+    background-color:#fff;
     height: 190px;
     text-align: center;
     padding: 0 72px;
-    border-right: 1px solid #f2f2f2;
+    border-right: 1px solid #999;
     color: #999;
     float: left;
+    display: flex;
+    flex-direction: column;
   }
   
   .xtx_footer .contact dl:first-child {
-    padding-left: 0;
+   margin-left: 0;
   }
   
   .xtx_footer .contact dl:last-child {
@@ -284,106 +337,50 @@ li {
   
   .xtx_footer .contact dt {
     line-height: 1;
-    font-size: 28px;
+    font-size: 20px;
     color:#07406c;
+    margin-top: 25px;
   }
   
   .xtx_footer .contact dd {
-    margin: 36px 12px 0 0;
-    float: left;
     font-size: 20px;
     text-align: center;
+    display: flex;
+    flex-direction:row;
+    /* background-color: #666; */
+    height:100px;
+    width:100% ;
+    margin-top: 20px;
+  }
+  .xtx_footer .contact dd i{
+    font-size: 70px;
   }
   
+  .xtx_footer .contact dd i:hover{
+    color:#07406c;
+    font-size: 60px;
+  }
+  .xtx_footer .contact dd img{
+    width: 100px;
+  }
+  .xtx_footer .contact dd span{
+    font-size: 15px;
+  }
   .xtx_footer .contact dd:last-child {
     margin-right: 0;
   }
   
-  .xtx_footer .contact .chat, .xtx_footer .contact .feedback, .xtx_footer .contact .weixin, .xtx_footer .contact .weibo {
-    width: 92px;
-    height: 92px;
-    padding-top: 20px;
-    border: 1px solid #ededed;
+  .xtx_footer .contact dd .download{
+     width: 200px;
+     height: 30px;
+     margin-left: 50px;
+     background-color: #07406c;
   }
-  
-  .xtx_footer .contact .chat:before, .xtx_footer .contact .feedback:before, .xtx_footer .contact .weixin:before, .xtx_footer .contact .weibo:before {
-    content: '';
-    display: block;
-    width: 40px;
-    height: 30px;
-    margin: 0 auto 8px;
-    background-image: url(../images/sprites.png);
-    background-size: 400px 400px;
-  }
-  
-  .xtx_footer .contact .chat:before {
-    background-position: -245px -70px;
-  }
-  
-  .xtx_footer .contact .chat:hover:before {
-    background-position: -200px -70px;
-  }
-  
-  .xtx_footer .contact .feedback:before {
-    background-position: -345px -70px;
-  }
-  
-  .xtx_footer .contact .feedback:hover:before {
-    background-position: -295px -70px;
-  }
-  
-  .xtx_footer .contact .weixin:before {
-    background-position: -247px -15px;
-  }
-  
-  .xtx_footer .contact .weixin:hover:before {
-    background-position: -202px -15px;
-  }
-  
-  .xtx_footer .contact .weibo:before {
-    background-position: -347px -15px;
-  }
-  
-  .xtx_footer .contact .weibo:hover:before {
-    background-position: -297px -15px;
-  }
-  
-  .xtx_footer .contact .qrcode {
-    width: 92px;
-    height: 92px;
-    padding: 7px;
-    border: 1px solid #ededed;
-  }
-  
-  .xtx_footer .contact .download {
-    padding-top: 5px;
-    font-size: 14px;
-  }
-  
-  .xtx_footer .contact .download span {
-    display: block;
-  }
-  
-  .xtx_footer .contact .download a {
-    display: block;
-    line-height: 1;
-    padding: 10px 25px;
-    margin-top: 5px;
+  .xtx_footer .contact dd a{
+    text-decoration: none;
     color: #fff;
-    border-radius: 2px;
-    background-color:#07406c;
-  }
-  
-  .xtx_footer .contact .hotline {
-    padding-top: 20px;
-    font-size: 22px;
-    color: #666;
-  }
-  
-  .xtx_footer .contact .hotline small {
-    display: block;
+    text-align: center;
     font-size: 15px;
-    color: #999;
   }
   
   .xtx_footer .extra {
@@ -399,40 +396,89 @@ li {
     font-size: 15px;
   }
   
-  /* 图标 */
-.xtx_footer .chat i{
-  font-size: 50px;
-  position: relative;
-  top:-40px;
-}
-.xtx_footer .chat:hover i{
-  color:#07406c;
+
+/* 设备自适应 */
+@media screen and (max-width: 500px){
+   body .iconfont{
+      font-size:20px;
+    }
+    /* 头部 */
+    .head{
+      height: 70px;
+    }
+    .head .right p{
+      font-size: 10px;
+    }
+    .head .right li i{
+      font-size:20px;
+      margin-left: 5px;
+    }
+    /* 门面 */
+    .door .label{
+      width: 40%;
+      height: 50px;
+      top:30%;
+    }
+    .door .label .left{
+      width: 15%;
+      height: 50px;
+      font-size: 20px;
+    }
+    .door .label .right{
+      width: 55%;
+      height: 50px;
+      font-size: 10px;
+    }
+    /* 标题 */
+    .title{
+      height: 50px;
+      margin: 50px auto;
+    }
+    .title p{
+      font-size: 20px;
+      margin-top: 20px;
+      margin-left: 100px;
+    }
+    .title i{
+      margin-top: 20px;
+      color: #07406c;
+      animation: move 3s infinite linear;
+    }
+    /* 焦点图 */
+    .xtx_category_super a {
+      font-size: 14px;
+      line-height: 50px;
+    }
+    
+    .xtx_category_super a small {
+      font-size: 8px;
+    }
+    /* 底部 */
+    .xtx_footer .contact dt {
+      font-size: 10px;
+      margin-top: 25px;
+    }
+    .xtx_footer .contact .iconfont{
+      font-size: 40px;
+    }
+    .xtx_footer .contact dd{
+      font-size: 10px;
+    }
+    .xtx_footer .contact dd img{
+      width: 50px;
+    }
+    .xtx_footer .contact dd span{
+      font-size: 8px;
+    }
+    .xtx_footer .contact dd .download{
+      width: 100px;
+      height: 60px;
+      margin-left: 30px;
+   }
+   .xtx_footer .contact dd a{
+    font-size: 5px;
+  }
 }
 
 
-.xtx_footer .feedback i{
-  font-size: 50px;
-  position: relative;
-  top:-40px;
-}
-.xtx_footer .feedback:hover i{
-  color:#07406c;
-}
 
-.xtx_footer .weixin i{
-  font-size: 50px;
-  position: relative;
-  top:-40px;
-}
-.xtx_footer .weixin:hover i{
-  color:#07406c;
-}
-
-.xtx_footer .weibo i{
-  font-size: 50px;
-  position: relative;
-  top:-40px;
-}
-.xtx_footer .weibo:hover i{
-  color:#07406c;
-}

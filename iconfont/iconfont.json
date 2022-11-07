@@ -132,6 +132,13 @@
       "unicode_decimal": 60117
     },
     {
+      "icon_id": "6446244",
+      "name": "密码（关）",
+      "font_class": "tianchongxing-",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
       "icon_id": "11758254",
       "name": "公交车",
       "font_class": "gongjiaoche",
